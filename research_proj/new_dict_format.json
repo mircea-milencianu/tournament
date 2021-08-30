@@ -1,0 +1,15 @@
+{(0,0): [
+        [
+            [(C, C), (C, C), (C, C), (C, C)],
+            [
+                False, (12, 12), (0,0) // winner_index, scores, scores_diff
+            ]
+        ],
+        [
+            [(C, C), (C, C), (C, C), (C, C)], 
+            [
+                False, (12,12), (0,0)
+            ]
+        ]
+    ]
+}))

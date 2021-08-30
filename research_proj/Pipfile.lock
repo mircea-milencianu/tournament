@@ -1,0 +1,25 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "a020717f93a6e00e38f0ea7fafc30bbfc669c5c68ae47bc98ce759b2755165ad"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.9"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "axelrod": {
+            "path": "./../libraries/Axelrod",
+            "version": "==4.10.0"
+        }
+    },
+    "develop": {}
+}

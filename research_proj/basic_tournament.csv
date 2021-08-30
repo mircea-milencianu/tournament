@@ -1,0 +1,25 @@
+Interaction index,Player index,Opponent index,Repetition,Player name,Opponent name,Actions,Score,Score difference,Win
+0,0,0,0,Cooperator,Cooperator,CCCC,12,0,0
+0,0,0,0,Cooperator,Cooperator,CCCC,12,0,0
+1,0,0,1,Cooperator,Cooperator,CCCC,12,0,0
+1,0,0,1,Cooperator,Cooperator,CCCC,12,0,0
+2,0,1,0,Cooperator,Defector,CCCC,0,-20,0
+2,1,0,0,Defector,Cooperator,DDDD,20,20,1
+3,0,1,1,Cooperator,Defector,CCCC,0,-20,0
+3,1,0,1,Defector,Cooperator,DDDD,20,20,1
+4,0,2,0,Cooperator,Tit For Tat,CCCC,12,0,0
+4,2,0,0,Tit For Tat,Cooperator,CCCC,12,0,0
+5,0,2,1,Cooperator,Tit For Tat,CCCC,12,0,0
+5,2,0,1,Tit For Tat,Cooperator,CCCC,12,0,0
+6,1,1,0,Defector,Defector,DDDD,4,0,0
+6,1,1,0,Defector,Defector,DDDD,4,0,0
+7,1,1,1,Defector,Defector,DDDD,4,0,0
+7,1,1,1,Defector,Defector,DDDD,4,0,0
+8,1,2,0,Defector,Tit For Tat,DDDD,8,5,1
+8,2,1,0,Tit For Tat,Defector,CDDD,3,-5,0
+9,1,2,1,Defector,Tit For Tat,DDDD,8,5,1
+9,2,1,1,Tit For Tat,Defector,CDDD,3,-5,0
+10,2,2,0,Tit For Tat,Tit For Tat,CCCC,12,0,0
+10,2,2,0,Tit For Tat,Tit For Tat,CCCC,12,0,0
+11,2,2,1,Tit For Tat,Tit For Tat,CCCC,12,0,0
+11,2,2,1,Tit For Tat,Tit For Tat,CCCC,12,0,0
