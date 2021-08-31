@@ -1,25 +1,25 @@
-Interaction index,Player index,Opponent index,Repetition,Player name,Opponent name,Actions,Score,Score difference,Win
-0,0,0,0,Cooperator,Cooperator,CCCC,12,0,0
-0,0,0,0,Cooperator,Cooperator,CCCC,12,0,0
-1,0,0,1,Cooperator,Cooperator,CCCC,12,0,0
-1,0,0,1,Cooperator,Cooperator,CCCC,12,0,0
-2,0,1,0,Cooperator,Defector,CCCC,0,-20,0
-2,1,0,0,Defector,Cooperator,DDDD,20,20,1
-3,0,1,1,Cooperator,Defector,CCCC,0,-20,0
-3,1,0,1,Defector,Cooperator,DDDD,20,20,1
-4,0,2,0,Cooperator,Tit For Tat,CCCC,12,0,0
-4,2,0,0,Tit For Tat,Cooperator,CCCC,12,0,0
-5,0,2,1,Cooperator,Tit For Tat,CCCC,12,0,0
-5,2,0,1,Tit For Tat,Cooperator,CCCC,12,0,0
-6,1,1,0,Defector,Defector,DDDD,4,0,0
-6,1,1,0,Defector,Defector,DDDD,4,0,0
-7,1,1,1,Defector,Defector,DDDD,4,0,0
-7,1,1,1,Defector,Defector,DDDD,4,0,0
-8,1,2,0,Defector,Tit For Tat,DDDD,8,5,1
-8,2,1,0,Tit For Tat,Defector,CDDD,3,-5,0
-9,1,2,1,Defector,Tit For Tat,DDDD,8,5,1
-9,2,1,1,Tit For Tat,Defector,CDDD,3,-5,0
-10,2,2,0,Tit For Tat,Tit For Tat,CCCC,12,0,0
-10,2,2,0,Tit For Tat,Tit For Tat,CCCC,12,0,0
-11,2,2,1,Tit For Tat,Tit For Tat,CCCC,12,0,0
-11,2,2,1,Tit For Tat,Tit For Tat,CCCC,12,0,0
+Interaction index,Player index,Opponent index,Repetition,Player name,Opponent name,Actions,Score,Score difference,Win,Turns
+0,0,0,0,Cooperator,Cooperator,CCCCCCCCCCCCCCCC,48,0,0,16
+0,0,0,0,Cooperator,Cooperator,CCCCCCCCCCCCCCCC,48,0,0,16
+1,0,0,1,Cooperator,Cooperator,CCCCCCCCCCCCCCCCCCC,57,0,0,19
+1,0,0,1,Cooperator,Cooperator,CCCCCCCCCCCCCCCCCCC,57,0,0,19
+2,0,1,0,Cooperator,Defector,CCC,0,-15,0,3
+2,1,0,0,Defector,Cooperator,DDD,15,15,1,3
+3,0,1,1,Cooperator,Defector,CCCCCCCCCCC,0,-55,0,11
+3,1,0,1,Defector,Cooperator,DDDDDDDDDDD,55,55,1,11
+4,0,2,0,Cooperator,Tit For Tat,CCCCCCCCCCCC,36,0,0,12
+4,2,0,0,Tit For Tat,Cooperator,CCCCCCCCCCCC,36,0,0,12
+5,0,2,1,Cooperator,Tit For Tat,CCCCCCCCCCCCCCCCCCCCCCCC,72,0,0,24
+5,2,0,1,Tit For Tat,Cooperator,CCCCCCCCCCCCCCCCCCCCCCCC,72,0,0,24
+6,1,1,0,Defector,Defector,DDDDDDDDDDDDDDDDDDDDDDDD,24,0,0,24
+6,1,1,0,Defector,Defector,DDDDDDDDDDDDDDDDDDDDDDDD,24,0,0,24
+7,1,1,1,Defector,Defector,DDDD,4,0,0,4
+7,1,1,1,Defector,Defector,DDDD,4,0,0,4
+8,1,2,0,Defector,Tit For Tat,DDDDDDDD,12,5,1,8
+8,2,1,0,Tit For Tat,Defector,CDDDDDDD,7,-5,0,8
+9,1,2,1,Defector,Tit For Tat,DDDDDDDDDDDDDDDDDDDDDDDDDD,30,5,1,26
+9,2,1,1,Tit For Tat,Defector,CDDDDDDDDDDDDDDDDDDDDDDDDD,25,-5,0,26
+10,2,2,0,Tit For Tat,Tit For Tat,CCCCCCCCCCCCCCCCCCCCCCCCCCCCCC,90,0,0,30
+10,2,2,0,Tit For Tat,Tit For Tat,CCCCCCCCCCCCCCCCCCCCCCCCCCCCCC,90,0,0,30
+11,2,2,1,Tit For Tat,Tit For Tat,CCCCCCCCCCCCCCCCCC,54,0,0,18
+11,2,2,1,Tit For Tat,Tit For Tat,CCCCCCCCCCCCCCCCCC,54,0,0,18

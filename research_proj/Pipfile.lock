@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "a020717f93a6e00e38f0ea7fafc30bbfc669c5c68ae47bc98ce759b2755165ad"
+            "sha256": "82d2d4ab5b4ea80c169036ca436f48ea40401f7904eb478e869ff75834a1b76c"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -17,7 +17,7 @@
     },
     "default": {
         "axelrod": {
-            "path": "./../libraries/Axelrod",
+            "path": "./../../Axelrod",
             "version": "==4.10.0"
         }
     },
