@@ -1,25 +1,61 @@
-Interaction index,Player index,Opponent index,Repetition,Player name,Opponent name,Score,Score difference,Win,Turns
-0,0,0,0,Cooperator,Cooperator,288,0,0,96
-0,0,0,0,Cooperator,Cooperator,288,0,0,96
-1,0,0,1,Cooperator,Cooperator,324,0,0,108
-1,0,0,1,Cooperator,Cooperator,324,0,0,108
-2,0,1,0,Cooperator,Defector,0,-510,0,102
-2,1,0,0,Defector,Cooperator,510,510,1,102
-3,0,1,1,Cooperator,Defector,0,-470,0,94
-3,1,0,1,Defector,Cooperator,470,470,1,94
-4,0,2,0,Cooperator,Tit For Tat,291,0,0,97
-4,2,0,0,Tit For Tat,Cooperator,291,0,0,97
-5,0,2,1,Cooperator,Tit For Tat,306,0,0,102
-5,2,0,1,Tit For Tat,Cooperator,306,0,0,102
-6,1,1,0,Defector,Defector,103,0,0,103
-6,1,1,0,Defector,Defector,103,0,0,103
-7,1,1,1,Defector,Defector,102,0,0,102
-7,1,1,1,Defector,Defector,102,0,0,102
-8,1,2,0,Defector,Tit For Tat,114,5,1,110
-8,2,1,0,Tit For Tat,Defector,109,-5,0,110
-9,1,2,1,Defector,Tit For Tat,109,5,1,105
-9,2,1,1,Tit For Tat,Defector,104,-5,0,105
-10,2,2,0,Tit For Tat,Tit For Tat,273,0,0,91
-10,2,2,0,Tit For Tat,Tit For Tat,273,0,0,91
-11,2,2,1,Tit For Tat,Tit For Tat,270,0,0,90
-11,2,2,1,Tit For Tat,Tit For Tat,270,0,0,90
+Interaction index,Player index,Opponent index,Repetition,Player name,Opponent name,Score,Score difference,Win,Turns,Winner List
+0,0,0,0,Cooperator,Cooperator,300,0,0,100,"[0, 0, 1]"
+0,0,0,0,Cooperator,Cooperator,300,0,0,100,"[0, 0, 1]"
+1,0,0,1,Cooperator,Cooperator,321,0,0,107,"[0, 0, 1]"
+1,0,0,1,Cooperator,Cooperator,321,0,0,107,"[0, 0, 1]"
+2,0,0,2,Cooperator,Cooperator,297,0,0,99,"[0, 0, 1]"
+2,0,0,2,Cooperator,Cooperator,297,0,0,99,"[0, 0, 1]"
+3,0,0,3,Cooperator,Cooperator,270,0,0,90,"[0, 0, 1]"
+3,0,0,3,Cooperator,Cooperator,270,0,0,90,"[0, 0, 1]"
+4,0,0,4,Cooperator,Cooperator,288,0,0,96,"[0, 0, 1]"
+4,0,0,4,Cooperator,Cooperator,288,0,0,96,"[0, 0, 1]"
+5,0,1,0,Cooperator,Defector,0,-490,0,98,"[0, 1, 0]"
+5,1,0,0,Defector,Cooperator,490,490,1,98,"[0, 1, 0]"
+6,0,1,1,Cooperator,Defector,0,-520,0,104,"[0, 1, 0]"
+6,1,0,1,Defector,Cooperator,520,520,1,104,"[0, 1, 0]"
+7,0,1,2,Cooperator,Defector,0,-490,0,98,"[0, 1, 0]"
+7,1,0,2,Defector,Cooperator,490,490,1,98,"[0, 1, 0]"
+8,0,1,3,Cooperator,Defector,0,-465,0,93,"[0, 1, 0]"
+8,1,0,3,Defector,Cooperator,465,465,1,93,"[0, 1, 0]"
+9,0,1,4,Cooperator,Defector,0,-545,0,109,"[0, 1, 0]"
+9,1,0,4,Defector,Cooperator,545,545,1,109,"[0, 1, 0]"
+10,0,2,0,Cooperator,Tit For Tat,285,0,0,95,"[0, 0, 1]"
+10,2,0,0,Tit For Tat,Cooperator,285,0,0,95,"[0, 0, 1]"
+11,0,2,1,Cooperator,Tit For Tat,309,0,0,103,"[0, 0, 1]"
+11,2,0,1,Tit For Tat,Cooperator,309,0,0,103,"[0, 0, 1]"
+12,0,2,2,Cooperator,Tit For Tat,276,0,0,92,"[0, 0, 1]"
+12,2,0,2,Tit For Tat,Cooperator,276,0,0,92,"[0, 0, 1]"
+13,0,2,3,Cooperator,Tit For Tat,303,0,0,101,"[0, 0, 1]"
+13,2,0,3,Tit For Tat,Cooperator,303,0,0,101,"[0, 0, 1]"
+14,0,2,4,Cooperator,Tit For Tat,312,0,0,104,"[0, 0, 1]"
+14,2,0,4,Tit For Tat,Cooperator,312,0,0,104,"[0, 0, 1]"
+15,1,1,0,Defector,Defector,103,0,0,103,"[0, 0, 1]"
+15,1,1,0,Defector,Defector,103,0,0,103,"[0, 0, 1]"
+16,1,1,1,Defector,Defector,96,0,0,96,"[0, 0, 1]"
+16,1,1,1,Defector,Defector,96,0,0,96,"[0, 0, 1]"
+17,1,1,2,Defector,Defector,104,0,0,104,"[0, 0, 1]"
+17,1,1,2,Defector,Defector,104,0,0,104,"[0, 0, 1]"
+18,1,1,3,Defector,Defector,102,0,0,102,"[0, 0, 1]"
+18,1,1,3,Defector,Defector,102,0,0,102,"[0, 0, 1]"
+19,1,1,4,Defector,Defector,96,0,0,96,"[0, 0, 1]"
+19,1,1,4,Defector,Defector,96,0,0,96,"[0, 0, 1]"
+20,1,2,0,Defector,Tit For Tat,99,5,1,95,"[1, 0, 0]"
+20,2,1,0,Tit For Tat,Defector,94,-5,0,95,"[1, 0, 0]"
+21,1,2,1,Defector,Tit For Tat,107,5,1,103,"[1, 0, 0]"
+21,2,1,1,Tit For Tat,Defector,102,-5,0,103,"[1, 0, 0]"
+22,1,2,2,Defector,Tit For Tat,105,5,1,101,"[1, 0, 0]"
+22,2,1,2,Tit For Tat,Defector,100,-5,0,101,"[1, 0, 0]"
+23,1,2,3,Defector,Tit For Tat,99,5,1,95,"[1, 0, 0]"
+23,2,1,3,Tit For Tat,Defector,94,-5,0,95,"[1, 0, 0]"
+24,1,2,4,Defector,Tit For Tat,94,5,1,90,"[1, 0, 0]"
+24,2,1,4,Tit For Tat,Defector,89,-5,0,90,"[1, 0, 0]"
+25,2,2,0,Tit For Tat,Tit For Tat,276,0,0,92,"[0, 0, 1]"
+25,2,2,0,Tit For Tat,Tit For Tat,276,0,0,92,"[0, 0, 1]"
+26,2,2,1,Tit For Tat,Tit For Tat,303,0,0,101,"[0, 0, 1]"
+26,2,2,1,Tit For Tat,Tit For Tat,303,0,0,101,"[0, 0, 1]"
+27,2,2,2,Tit For Tat,Tit For Tat,306,0,0,102,"[0, 0, 1]"
+27,2,2,2,Tit For Tat,Tit For Tat,306,0,0,102,"[0, 0, 1]"
+28,2,2,3,Tit For Tat,Tit For Tat,306,0,0,102,"[0, 0, 1]"
+28,2,2,3,Tit For Tat,Tit For Tat,306,0,0,102,"[0, 0, 1]"
+29,2,2,4,Tit For Tat,Tit For Tat,291,0,0,97,"[0, 0, 1]"
+29,2,2,4,Tit For Tat,Tit For Tat,291,0,0,97,"[0, 0, 1]"
