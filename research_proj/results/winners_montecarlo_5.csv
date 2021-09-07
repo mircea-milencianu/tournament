@@ -1,0 +1,4 @@
+,Cooperator,Defector,Tit For Tat
+Cooperator,"[0, 0, 10]","[0, 5, 0]","[0, 0, 5]"
+Defector,"[0, 5, 0]","[0, 0, 10]","[5, 0, 0]"
+Tit For Tat,"[0, 0, 5]","[5, 0, 0]","[0, 0, 10]"
