@@ -1,2 +1,4 @@
 Pipfile
 Pipfile.lock
+tournament_default.csv
+tournament_mc.csv
