@@ -17,11 +17,13 @@ player_set = {
 
 def main():
     ### INIT ###
-    #players = player_set["first_tour"] + player_set["second_tour"]
-    players = player_set["dev_tour"]
+    players = player_set["first_tour"] # + player_set["second_tour"]
+    # players = player_set["dev_tour"]
     start = timer()
     tournament_default = axl.Tournament(players, turns=100, repetitions=5)
-    tournament_mc = axl.Tournament(players, turns=100, uniform=True, deviation=10, repetitions=1)
+    tournament_mc = axl.Tournament(
+        players, turns=100, uniform=True, deviation=25, repetitions=5
+    )
     end = timer()
     print("time spent for init: {}".format(end - start))
     ### PLAY ###
