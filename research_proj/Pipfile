@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 axelrod = {path = "./../../Axelrod"}
 black = "*"
+rich = "*"
 
 [dev-packages]
 

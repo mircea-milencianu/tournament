@@ -1,28 +1,32 @@
 import axelrod as axl
-import pprint as p
+from rich import print
 
 from timeit import default_timer as timer
 
 from axelrod import tournament
 from axelrod import result_set
 
+TURNS = 50
+REPETITIONS = 10
+DEVIATION = 10
 
 player_set = {
     "dev_tour": [axl.Cooperator(), axl.Defector(), axl.TitForTat()],
     "first_tour": [s() for s in axl.axelrod_first_strategies],
-    "second_tour": [s() for s in axl.axelrod_second_strategies],
+    "second_tour": [
+        s() for s in axl.axelrod_second_strategies
+    ],  # this is created by me and can be found in the init file for the axl library; in case of error
     "all": [s() for s in axl.all_strategies],
 }
 
 
 def main():
     ### INIT ###
-    players = player_set["first_tour"] # + player_set["second_tour"]
-    # players = player_set["dev_tour"]
+    players = player_set["dev_tour"]  # + player_set["second_tour"]
     start = timer()
-    tournament_default = axl.Tournament(players, turns=100, repetitions=5)
+    tournament_default = axl.Tournament(players, turns=TURNS, repetitions=REPETITIONS)
     tournament_mc = axl.Tournament(
-        players, turns=100, uniform=True, deviation=25, repetitions=5
+        players, turns=TURNS, uniform=True, deviation=DEVIATION, repetitions=REPETITIONS
     )
     end = timer()
     print("time spent for init: {}".format(end - start))
@@ -39,13 +43,13 @@ def main():
     matrix_default = axl.ResultMatrix(
         filename="tournament_default.csv",
         players=players,
-        repetitions=1000,
+        repetitions=REPETITIONS,
         tour_type="default_devNone",
     )
     matrix_mc = axl.ResultMatrix(
         filename="tournament_mc.csv",
         players=players,
-        repetitions=1000,
+        repetitions=REPETITIONS,
         tour_type="montecarlo_dev40",
     )
     winner_matrix = matrix_mc.create()
