@@ -9,6 +9,7 @@ from axelrod import result_set
 TURNS = 50
 REPETITIONS = 10
 DEVIATION = 10
+RUN_TYPE = "DEV"
 
 player_set = {
     "dev_tour": [axl.Cooperator(), axl.Defector(), axl.TitForTat()],
@@ -45,12 +46,14 @@ def main():
         players=players,
         repetitions=REPETITIONS,
         tour_type="default_devNone",
+        run_type=RUN_TYPE
     )
     matrix_mc = axl.ResultMatrix(
         filename="tournament_mc.csv",
         players=players,
         repetitions=REPETITIONS,
         tour_type="montecarlo_dev40",
+        run_type=RUN_TYPE
     )
     winner_matrix = matrix_mc.create()
     winner_matrix = matrix_default.create()
