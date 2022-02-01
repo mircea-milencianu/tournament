@@ -6,10 +6,10 @@ from timeit import default_timer as timer
 from axelrod import tournament
 from axelrod import result_set
 
-TURNS = 50
-REPETITIONS = 10
-DEVIATION = 10
-RUN_TYPE = "DEV"
+TURNS = 200
+REPETITIONS = 100
+DEVIATION = 20
+RUN_TYPE = "PAPER"
 
 player_set = {
     "dev_tour": [axl.Cooperator(), axl.Defector(), axl.TitForTat()],
@@ -23,7 +23,7 @@ player_set = {
 
 def main():
     ### INIT ###
-    players = player_set["dev_tour"]  # + player_set["second_tour"]
+    players = player_set["first_tour"] + player_set["second_tour"]
     start = timer()
     tournament_default = axl.Tournament(players, turns=TURNS, repetitions=REPETITIONS)
     tournament_mc = axl.Tournament(
@@ -45,14 +45,14 @@ def main():
         filename="tournament_default.csv",
         players=players,
         repetitions=REPETITIONS,
-        tour_type="default_devNone",
+        tour_type="default_dev=None",
         run_type=RUN_TYPE
     )
     matrix_mc = axl.ResultMatrix(
         filename="tournament_mc.csv",
         players=players,
         repetitions=REPETITIONS,
-        tour_type="montecarlo_dev40",
+        tour_type="montecarlo_dev={}".format(DEVIATION),
         run_type=RUN_TYPE
     )
     winner_matrix = matrix_mc.create()
