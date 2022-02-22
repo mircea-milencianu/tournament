@@ -8,8 +8,7 @@ from axelrod import result_set
 
 TURNS = 200
 REPETITIONS = 100
-DEVIATION = 20
-RUN_TYPE = "PAPER"
+RUN_TYPE = "dev"
 
 player_set = {
     "dev_tour": [axl.Cooperator(), axl.Defector(), axl.TitForTat()],
@@ -20,46 +19,48 @@ player_set = {
     "all": [s() for s in axl.all_strategies],
 }
 
+def step_run(players, deviation):
 
-def main():
-    ### INIT ###
-    players = player_set["first_tour"] + player_set["second_tour"]
-    start = timer()
-    tournament_default = axl.Tournament(players, turns=TURNS, repetitions=REPETITIONS)
     tournament_mc = axl.Tournament(
-        players, turns=TURNS, uniform=True, deviation=DEVIATION, repetitions=REPETITIONS
+        players, turns=TURNS, uniform=True, deviation=deviation, repetitions=REPETITIONS
     )
-    end = timer()
-    print("time spent for init: {}".format(end - start))
-    ### PLAY ###
-    start = timer()
-    result_set_default = tournament_default.play(
-        filename="tournament_default.csv", processes=4
-    )  #
     result_set_mc = tournament_mc.play(filename="tournament_mc.csv", processes=4)  #
     end = timer()
-    print("time spent for playing the matches: {}".format(end - start))
-    ### EXPORT ###
-    start = timer()
-    matrix_default = axl.ResultMatrix(
-        filename="tournament_default.csv",
-        players=players,
-        repetitions=REPETITIONS,
-        tour_type="default_dev=None",
-        run_type=RUN_TYPE
-    )
     matrix_mc = axl.ResultMatrix(
         filename="tournament_mc.csv",
         players=players,
         repetitions=REPETITIONS,
-        tour_type="montecarlo_dev={}".format(DEVIATION),
-        run_type=RUN_TYPE
+        deviation=deviation,
+        run_type="montecarlo"
     )
     winner_matrix = matrix_mc.create()
-    winner_matrix = matrix_default.create()
-    end = timer()
-    print("time spent for building the matrix: {}".format(end - start))
 
+def main():
+    ### INIT ###
+    # players = player_set["first_tour"] + player_set["second_tour"]
+    players = player_set["dev_tour"]
+
+    ### run basic tour with no dev
+    tournament_default = axl.Tournament(players, turns=TURNS, repetitions=REPETITIONS)
+    result_set_default = tournament_default.play(
+        filename="tournament_default.csv", processes=4
+    )  
+    matrix_default = axl.ResultMatrix(
+        filename="tournament_default.csv",
+        players=players,
+        repetitions=REPETITIONS,
+        deviation=None,
+        run_type="default"
+    )
+    winner_matrix = matrix_default.create()
+    ### run basic tour with no dev ###############################
+
+    deviation = 100
+    step = 5
+    while deviation >= 80:
+        step_run(players, deviation)
+        deviation = deviation - step
+    
 
 if __name__ == "__main__":
     main()
