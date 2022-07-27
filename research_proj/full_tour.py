@@ -30,8 +30,9 @@ def step_run(players, deviation):
         filename="tournament_mc.csv",
         players=players,
         repetitions=REPETITIONS,
-        deviation=deviation,
-        run_type="montecarlo"
+        # deviation=deviation,
+        tour_type='montecarlo',
+        run_type=RUN_TYPE
     )
     winner_matrix = matrix_mc.create()
 
@@ -49,8 +50,10 @@ def main():
         filename="tournament_default.csv",
         players=players,
         repetitions=REPETITIONS,
-        deviation=None,
-        run_type="default"
+        tour_type='default',
+
+        # deviation=None,
+        run_type=RUN_TYPE
     )
     winner_matrix = matrix_default.create()
     ### run basic tour with no dev ###############################
