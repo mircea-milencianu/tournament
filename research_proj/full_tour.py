@@ -1,13 +1,3 @@
-from random import uniform
-import axelrod as axl
-from rich import print
-
-from timeit import default_timer as timer
-
-from axelrod import tournament
-from axelrod import result_set
-
-
 """
 RUN_SCOPE: string
     Defines the scope of run. ex: dev, first strategy set, second strategy set, all strategies;
@@ -29,7 +19,18 @@ REPETITIONS: int
     The number of repetitions of a supergame.
 
 """
+from random import uniform
+import axelrod as axl
+from rich import print
+import json
+
+from timeit import default_timer as timer
+
+from axelrod import tournament
+from axelrod import result_set
+
 RUN_SCOPE = "all_strategies_test_run"
+TOUR_TYPE = "simple"
 SINGLE_RUN = True
 DEVIATION = 20
 STEP = 2
@@ -40,7 +41,7 @@ REPETITIONS = 1000
 # Set to TRUE to enable a deviation step run. 
 # A deviation step needs to be provided along the variable
 
-PROCESSES = 16
+PROCESSES = 20
 
 player_set = {
     "dev_tour": [axl.Cooperator(), axl.Defector(), axl.TitForTat()],
@@ -85,21 +86,34 @@ def play_tournament(players, tour_type):
             players=players,
             repetitions=REPETITIONS,
             tour_type=tour_type, #'montecarlo'
-            run_type=RUN_SCOPE
+            run_scope=RUN_SCOPE
         )
         winner_matrix = matrix_mc.create()
 
 def main():
 
     players = player_set["all"]
-
+    start = timer()
     if SINGLE_RUN is True:
-        play_tournament(players, "simple")
+        play_tournament(players, TOUR_TYPE)
     else:
-        play_step_tournaments(players, "deviation_step")
+        play_step_tournaments(players, TOUR_TYPE)
+    end = timer()
 
-
-
+    run_summary = {
+        "run_time": end - start,
+        "processes":PROCESSES,
+        "run_scope": RUN_SCOPE,
+        "tour_type": TOUR_TYPE,
+        "single_run": SINGLE_RUN,
+        "distribution": DISTRIBUTION,
+        "turns": TURNS,
+        "repetitions": REPETITIONS,
+        "deviation": DEVIATION,
+        "step": STEP,
+    }
+    with open("results_{}/run_summary.json".format(TOUR_TYPE), 'w') as fp:
+        json.dump(run_summary, fp)
     
 
 if __name__ == "__main__":
