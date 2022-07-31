@@ -29,17 +29,18 @@ REPETITIONS: int
     The number of repetitions of a supergame.
 
 """
-RUN_SCOPE = "dev"
+RUN_SCOPE = "all_strategies_test_run"
 SINGLE_RUN = True
 DEVIATION = 20
 STEP = 2
-DISTRIBUTION = "normal"
+DISTRIBUTION = "uniform"
 
 TURNS = 200
-REPETITIONS = 1
+REPETITIONS = 1000
 # Set to TRUE to enable a deviation step run. 
 # A deviation step needs to be provided along the variable
 
+PROCESSES = 16
 
 player_set = {
     "dev_tour": [axl.Cooperator(), axl.Defector(), axl.TitForTat()],
@@ -78,7 +79,7 @@ def play_tournament(players, tour_type):
             filename = "default_tournament"
 
         ### Play tournament
-        result_set_mc = tournament.play(filename="{}.csv".format(filename), processes=4)  #
+        result_set_mc = tournament.play(filename="{}.csv".format(filename), processes=PROCESSES)  #
         matrix_mc = axl.ResultMatrix(
             filename="{}.csv".format(filename),
             players=players,
@@ -90,7 +91,7 @@ def play_tournament(players, tour_type):
 
 def main():
 
-    players = player_set["dev_tour"]
+    players = player_set["all"]
 
     if SINGLE_RUN is True:
         play_tournament(players, "simple")
