@@ -7,4 +7,4 @@
 #BSUB -R "span[ptile=20]"
 #BSUB –q strategies_queue 
 
-python full_tour.py
+./bigdata/users-data/mircea.milencianu/repos/tournament/research_proj/full_tour.py

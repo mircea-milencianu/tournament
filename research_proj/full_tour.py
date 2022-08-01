@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 RUN_SCOPE: string
     Defines the scope of run. ex: dev, first strategy set, second strategy set, all strategies;
