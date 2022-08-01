@@ -41,7 +41,7 @@ REPETITIONS = 1000
 # Set to TRUE to enable a deviation step run. 
 # A deviation step needs to be provided along the variable
 
-PROCESSES = 20
+PROCESSES = 16
 
 player_set = {
     "dev_tour": [axl.Cooperator(), axl.Defector(), axl.TitForTat()],
