@@ -37,11 +37,11 @@ STEP = 2
 DISTRIBUTION = "uniform"
 
 TURNS = 200
-REPETITIONS = 1000
+REPETITIONS = 1
 # Set to TRUE to enable a deviation step run. 
 # A deviation step needs to be provided along the variable
 
-PROCESSES = 16
+PROCESSES = 4
 
 player_set = {
     "dev_tour": [axl.Cooperator(), axl.Defector(), axl.TitForTat()],
@@ -80,15 +80,16 @@ def play_tournament(players, tour_type):
             filename = "default_tournament"
 
         ### Play tournament
-        result_set_mc = tournament.play(filename="{}.csv".format(filename), processes=PROCESSES)  #
+        # result_set_mc = tournament.play(filename="{}.csv".format(filename), processes=PROCESSES)  #
         matrix_mc = axl.ResultMatrix(
             filename="{}.csv".format(filename),
             players=players,
             repetitions=REPETITIONS,
             tour_type=tour_type, #'montecarlo'
-            run_scope=RUN_SCOPE
+            run_scope=RUN_SCOPE,
+            progress_bar=False
         )
-        winner_matrix = matrix_mc.create()
+        # winner_matrix = matrix_mc.create()
 
 def main():
 
