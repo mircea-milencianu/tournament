@@ -1,0 +1,1 @@
+{"run_time": 0.30075889999999994, "processes": 4, "run_scope": "all_strategies_test_run", "tour_type": "simple", "single_run": true, "distribution": "uniform", "turns": 200, "repetitions": 1, "deviation": 20, "step": 2}
