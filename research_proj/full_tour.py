@@ -29,7 +29,7 @@ from timeit import default_timer as timer
 from axelrod import tournament
 from axelrod import result_set
 
-RUN_SCOPE = "all_strategies_test_run"
+RUN_SCOPE = "presentation_run"
 TOUR_TYPE = "simple"
 SINGLE_RUN = True
 DEVIATION = 20
@@ -37,7 +37,7 @@ STEP = 2
 DISTRIBUTION = "uniform"
 
 TURNS = 200
-REPETITIONS = 1
+REPETITIONS = 10
 # Set to TRUE to enable a deviation step run. 
 # A deviation step needs to be provided along the variable
 
@@ -80,7 +80,7 @@ def play_tournament(players, tour_type):
             filename = "default_tournament"
 
         ### Play tournament
-        # result_set_mc = tournament.play(filename="{}.csv".format(filename), processes=PROCESSES)  #
+        result_set_mc = tournament.play(filename="{}.csv".format(filename), processes=PROCESSES)  #
         matrix_mc = axl.ResultMatrix(
             filename="{}.csv".format(filename),
             players=players,
@@ -89,11 +89,11 @@ def play_tournament(players, tour_type):
             run_scope=RUN_SCOPE,
             progress_bar=False
         )
-        # winner_matrix = matrix_mc.create()
+        winner_matrix = matrix_mc.create()
 
 def main():
 
-    players = player_set["all"]
+    players = player_set["dev_tour"]
     start = timer()
     if SINGLE_RUN is True:
         play_tournament(players, TOUR_TYPE)
