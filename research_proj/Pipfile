@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-axelrod = {path = "./../../old-axel/Axelrod"}
+axelrod = {path = "./../../Axelrod"}
 black = "*"
 rich = "*"
 seaborn = "*"
