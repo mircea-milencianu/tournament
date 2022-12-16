@@ -1,0 +1,1 @@
+{"run_time": 10.380048500000001, "processes": 4, "run_scope": "paper_results", "tournament_name": "first_tour_for_paper", "single_run": true, "distribution": "uniform", "turns": 200, "repetitions": 1, "deviation": 20, "step": 2}
