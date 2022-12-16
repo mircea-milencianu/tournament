@@ -41,7 +41,7 @@ DEVIATION = 20
 STEP = 2
 DISTRIBUTION = "uniform"
 TURNS = 200
-REPETITIONS = 10
+REPETITIONS = 10000
 
 PROCESSES = 4
 
@@ -54,14 +54,12 @@ player_set = {
     "all": [s() for s in axl.all_strategies],
 }
 
-
 def play_step_tournaments(players):
     local_deviation = DEVIATION
 
     while local_deviation >= 1:
         play_tournament(players, "dev_with_step")
         local_deviation = local_deviation - STEP
-
 
 def play_tournament(players, tour_type):
 
@@ -103,7 +101,6 @@ def play_tournament(players, tour_type):
         progress_bar=False,
     )
     # winner_matrix = matrix_mc.create()
-
 
 def main():
 
