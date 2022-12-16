@@ -43,7 +43,7 @@ DISTRIBUTION = "uniform"
 TURNS = 200
 REPETITIONS = 10000
 
-PROCESSES = 4
+PROCESSES = 16
 
 player_set = {
     "dev_tour": [axl.Cooperator(), axl.Defector(), axl.TitForTat()],
