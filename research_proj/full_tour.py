@@ -31,10 +31,10 @@ from timeit import default_timer as timer
 from axelrod import tournament
 from axelrod import result_set
 
-TOUR_NAME = "simple_3_strategies"  # should be a choice
-RUN_SCOPE = "test"
+TOUR_NAME = "first_tour_for_paper"  # should be a choice
+RUN_SCOPE = "paper_results"
 
-## Set to TRUE to enable a single run of a tournament. A deviation step needs to be provided along the variable
+## Set to TRUE to enable a single run of a tournament. A deviation step needs to be provided along the variable if set to false.
 SINGLE_RUN = True
 ##
 DEVIATION = 20
@@ -107,7 +107,7 @@ def play_tournament(players, tour_type):
 
 def main():
 
-    players = player_set["dev_tour"]
+    players = player_set["first_tour"]
     start = timer()
     if SINGLE_RUN is True:
         play_tournament(players, TOUR_NAME)
