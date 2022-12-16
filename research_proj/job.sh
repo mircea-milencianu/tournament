@@ -6,4 +6,4 @@
 #BSUB -n 16
 #BSUB -R "span[ptile=20]"
 
-python ./bigdata/users-data/mircea.milencianu/repos/tournament/research_proj/full_tour.py
+python full_tour.py
