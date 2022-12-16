@@ -1,1 +1,0 @@
-{"run_time": 9.602742800000001, "processes": 4, "run_scope": "test", "tournament_name": "simple_3_strategies", "single_run": true, "distribution": "uniform", "turns": 200, "repetitions": 10, "deviation": 20, "step": 2}
