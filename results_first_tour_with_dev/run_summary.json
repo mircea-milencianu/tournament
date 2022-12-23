@@ -1,0 +1,1 @@
+{"run_time": 11.0781715, "processes": 4, "run_scope": "paper_results", "tournament_name": "first_tour_with_dev", "single_run": true, "distribution": "uniform", "turns": 200, "repetitions": 10, "deviation": 20, "step": 5}

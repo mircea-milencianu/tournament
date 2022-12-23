@@ -31,19 +31,19 @@ from timeit import default_timer as timer
 from axelrod import tournament
 from axelrod import result_set
 
-TOUR_NAME = "first_tour_for_paper"  # should be a choice
-RUN_SCOPE = "paper_results"
+TOUR_NAME = "base_first_tour"  # should be a choice
+RUN_SCOPE = "results"
 
 ## Set to TRUE to enable a single run of a tournament. A deviation step needs to be provided along the variable if set to false.
 SINGLE_RUN = True
 ##
 DEVIATION = 20
-STEP = 2
-DISTRIBUTION = "uniform"
+STEP = 5
+DISTRIBUTION = None #"uniform"
 TURNS = 200
-REPETITIONS = 100000
-
-PROCESSES = 20
+REPETITIONS = 10
+##
+PROCESSES = 4
 
 player_set = {
     "dev_tour": [axl.Cooperator(), axl.Defector(), axl.TitForTat()],
@@ -58,7 +58,7 @@ def play_step_tournaments(players):
     local_deviation = DEVIATION
 
     while local_deviation >= 1:
-        play_tournament(players, "dev_with_step")
+        play_tournament(players, f"{TOUR_NAME}_with_step_{STEP}_value_{local_deviation}")
         local_deviation = local_deviation - STEP
 
 def play_tournament(players, tour_type):
@@ -98,7 +98,6 @@ def play_tournament(players, tour_type):
         repetitions=REPETITIONS,
         tour_type=tour_type,  #'montecarlo'
         run_scope=RUN_SCOPE,
-        progress_bar=False,
     )
     # winner_matrix = matrix_mc.create()
 
@@ -109,7 +108,7 @@ def main():
     if SINGLE_RUN is True:
         play_tournament(players, TOUR_NAME)
     else:
-        play_step_tournaments(players, TOUR_NAME)
+        play_step_tournaments(players)
     end = timer()
 
     run_summary = {
@@ -127,7 +126,6 @@ def main():
     }
     with open("results_{}/run_summary.json".format(TOUR_NAME), "w") as fp:
         json.dump(run_summary, fp)
-
 
 if __name__ == "__main__":
     main()
